@@ -1,22 +1,22 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mosque, BookOpen } from 'lucide-react';
+import { Home, BookOpen } from 'lucide-react';
 
 const Header = () => {
   return (
     <header className="relative overflow-hidden">
       {/* Banner with Islamic green gradient background */}
-      <div className="bg-gradient-to-r from-green-800 via-green-700 to-green-800 py-8 px-6 relative">
+      <div className="bg-gradient-to-r from-green-800 via-green-700 to-green-800 py-6 px-6 relative">
         <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center space-x-4 mb-4">
-            <Mosque className="text-4xl text-yellow-300" size={48} />
-            <h1 className="text-3xl md:text-4xl font-bold text-white tracking-wide">
+          <div className="flex items-center justify-center space-x-4 mb-3">
+            <Home className="text-3xl text-yellow-300" size={40} />
+            <h1 className="text-2xl md:text-3xl font-bold text-white tracking-wide">
               Tashayyu Defense Society
             </h1>
-            <BookOpen className="text-4xl text-yellow-300" size={48} />
+            <BookOpen className="text-3xl text-yellow-300" size={40} />
           </div>
-          <p className="text-lg md:text-xl text-green-100 italic font-medium">
+          <p className="text-md md:text-lg text-green-100 italic font-medium">
             Defending Authentic Islam Through Wisdom and Knowledge
           </p>
         </div>

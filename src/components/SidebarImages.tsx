@@ -1,20 +1,20 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Images } from 'lucide-react';
+import { Image } from 'lucide-react';
 
 const SidebarImages = () => {
   const imageLinks = [
     {
       id: 1,
-      title: "Artistic Depiction of Masjid al-Nabi",
+      title: "Sacred Architecture",
       image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&h=200&fit=crop",
       link: "/scholars",
       description: "Explore the sacred architecture and history"
     },
     {
       id: 2,
-      title: "Islamic Calligraphy and Art",
+      title: "Islamic Calligraphy",
       image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=400&h=200&fit=crop",
       link: "/history",
       description: "Discover the beauty of Islamic artistic tradition"
@@ -26,7 +26,7 @@ const SidebarImages = () => {
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-4 bg-green-800 text-white">
           <h3 className="text-xl font-bold flex items-center">
-            <Images className="mr-2" size={24} />
+            <Image className="mr-2" size={24} />
             Featured Visuals
           </h3>
         </div>
@@ -63,11 +63,14 @@ const SidebarImages = () => {
           <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
             Latest Articles
           </Link>
-          <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
-            Most Popular
+          <Link to="/basics" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
+            Basic Beliefs
           </Link>
-          <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
-            All Topics
+          <Link to="/imams" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
+            The Twelve Imams
+          </Link>
+          <Link to="/history" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
+            Islamic History
           </Link>
         </div>
       </div>

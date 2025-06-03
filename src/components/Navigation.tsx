@@ -1,8 +1,10 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
+  const location = useLocation();
+  
   const navItems = [
     { title: 'Home', path: '/' },
     { title: 'Basics', path: '/basics' },
@@ -24,7 +26,11 @@ const Navigation = () => {
             <Link
               key={item.path}
               to={item.path}
-              className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md font-medium transition-colors duration-200 text-sm md:text-base whitespace-nowrap first:bg-green-800 first:text-white first:hover:bg-green-900"
+              className={`px-3 py-2 rounded-md font-medium transition-colors duration-200 text-sm md:text-base whitespace-nowrap ${
+                location.pathname === item.path
+                  ? 'bg-green-800 text-white'
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
             >
               {item.title}
             </Link>
