@@ -9,9 +9,11 @@ import Basics from "./pages/Basics";
 import Scholars from "./pages/Scholars";
 import History from "./pages/History";
 import Misconceptions from "./pages/Misconceptions";
+import Imams from "./pages/Imams";
 import Articles from "./pages/Articles";
 import AnsweringSunnis from "./pages/AnsweringSunnis";
 import Questions from "./pages/Questions";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,9 +30,11 @@ const App = () => (
           <Route path="/scholars" element={<Scholars />} />
           <Route path="/history" element={<History />} />
           <Route path="/misconceptions" element={<Misconceptions />} />
+          <Route path="/imams" element={<Imams />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/answering-sunnis" element={<AnsweringSunnis />} />
           <Route path="/questions" element={<Questions />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

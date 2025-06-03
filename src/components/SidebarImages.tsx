@@ -1,55 +1,53 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Images } from 'lucide-react';
 
 const SidebarImages = () => {
   const imageLinks = [
     {
       id: 1,
-      title: "Shia Scholars Portal",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop",
+      title: "Artistic Depiction of Masjid al-Nabi",
+      image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=400&h=200&fit=crop",
       link: "/scholars",
-      description: "Explore the lives and works of great Shia scholars"
+      description: "Explore the sacred architecture and history"
     },
     {
       id: 2,
-      title: "Historical Archives",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop",
+      title: "Islamic Calligraphy and Art",
+      image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?w=400&h=200&fit=crop",
       link: "/history",
-      description: "Discover the rich history of Tashayyu"
-    },
-    {
-      id: 3,
-      title: "Educational Resources",
-      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=300&h=200&fit=crop",
-      link: "/basics",
-      description: "Learn the fundamentals of Shia Islam"
+      description: "Discover the beauty of Islamic artistic tradition"
     }
   ];
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-amber-500 pb-2">
-          Featured Sections
-        </h2>
-        <div className="space-y-4">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="p-4 bg-green-800 text-white">
+          <h3 className="text-xl font-bold flex items-center">
+            <Images className="mr-2" size={24} />
+            Featured Visuals
+          </h3>
+        </div>
+        <div className="space-y-0">
           {imageLinks.map((item) => (
             <Link
               key={item.id}
               to={item.link}
-              className="block group hover:shadow-lg transition-shadow duration-200 rounded-lg overflow-hidden"
+              className="block group hover:shadow-lg transition-shadow duration-200"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-200"
-              />
-              <div className="p-3 bg-gray-50">
-                <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+              <div className="w-full h-48 relative overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="text-white p-4">
+                    <p className="text-lg font-semibold">{item.title}</p>
+                  </div>
+                </div>
               </div>
             </Link>
           ))}
@@ -57,18 +55,18 @@ const SidebarImages = () => {
       </div>
       
       {/* Topics Section */}
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">
+      <div className="bg-white shadow-lg rounded-lg p-6">
+        <h2 className="text-xl font-bold text-green-900 mb-4 border-b-2 border-yellow-500 pb-2">
           Browse Topics
         </h2>
-        <div className="space-y-2">
-          <Link to="/topics/latest" className="block text-blue-600 hover:text-blue-800 hover:underline">
+        <div className="space-y-3">
+          <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
             Latest Articles
           </Link>
-          <Link to="/topics/popular" className="block text-blue-600 hover:text-blue-800 hover:underline">
+          <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
             Most Popular
           </Link>
-          <Link to="/topics/all" className="block text-blue-600 hover:text-blue-800 hover:underline">
+          <Link to="/articles" className="block text-green-700 hover:text-green-900 hover:underline font-medium">
             All Topics
           </Link>
         </div>
